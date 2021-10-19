@@ -1,0 +1,4 @@
+<div class="display">
+{{ interval$ | async | time:timerValue}}
+</div>
+<mat-progress-bar class="progressbar" mode="determinate"  [value]="percent$ | async"></mat-progress-bar>

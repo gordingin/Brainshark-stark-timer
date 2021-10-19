@@ -1,0 +1,23 @@
+<div class="center" *ngIf="(processing$|async) === true">
+    <mat-spinner mode="indeterminate" [diameter]='20' color='primary'></mat-spinner>
+</div>
+<mat-card  *ngIf="(processing$|async) === false">
+    <mat-tab-group (selectedIndexChange)="tabChange($event)">
+        <mat-tab>
+        <ng-template mat-tab-label>
+            <mat-icon>hourglass_empty</mat-icon>
+            Timer
+        </ng-template>
+        <brainshark-timer [active]="(startTimer$|async)!"></brainshark-timer>
+        </mat-tab>
+
+        <mat-tab>
+        <ng-template mat-tab-label>
+            <mat-icon>timer</mat-icon>
+            Stopwatch
+        </ng-template>
+        <brainshark-stopwatch></brainshark-stopwatch>
+        </mat-tab>
+    </mat-tab-group>
+    <brainshark-timer-controls></brainshark-timer-controls>
+</mat-card>

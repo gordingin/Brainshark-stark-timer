@@ -1,0 +1,27 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2017", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@brainshark/web/root-store": ["libs/web/root-store/src/index.ts"],
+      "@brainshark/models": ["libs/models/src/index.ts"],
+      "@brainshark/web/layout": ["libs/web/layout/src/index.ts"],
+      "@brainshark/web/stopwatch": ["libs/web/stopwatch/src/index.ts"],
+      "@brainshark/web/timer": ["libs/web/timer/src/index.ts"],
+      "@brainshark/web/timer-controls": ["libs/web/timer-controls/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}
